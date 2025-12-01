@@ -21,8 +21,8 @@ we started working on the project in Sep 2025, and now it is open-source.
 ## About the team
 ### Code-Hatsu Team
 - Mohammed Saleh (me, Team Leader, Full Stack Web Developer with PHP and MySQL).
-- Halla Osama (UIUX Designer).
-- Abdelrahman Rashed (Front End Developer).
+- Halla Osama (UIUX Designer). -> https://github.com/Halla-Osama
+- Abdelrahman Rashed (Front End Developer). -> https://github.com/deku99hh
 
 ## Features
 - Login, Activate Account.
