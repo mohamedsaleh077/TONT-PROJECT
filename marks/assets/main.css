@@ -1,0 +1,402 @@
+/* 
+    Created on : Sep 26, 2025, 9:19:45 PM
+    Author     : Halla Osama
+*/
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    text-decoration: none;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-hover));
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.page-subtitle {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+}
+
+/* Overall Level Display */
+.level-display {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.level-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+}
+
+.level-circle svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.level-circle circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.progress-bg {
+    stroke: var(--border-color);
+}
+
+.progress-fill {
+    stroke: var(--success);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 110;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.level-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.level-percentage {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--success);
+    line-height: 1;
+}
+
+.level-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.level-grade {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+}
+
+.level-status {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Subject Grades */
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.subject-item {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.subject-item:hover {
+    border-color: var(--accent-blue);
+}
+
+.subject-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.subject-grade {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.subject-grade.excellent {
+    color: var(--success);
+}
+
+.subject-grade.good {
+    color: var(--accent-blue);
+}
+
+.subject-grade.average {
+    color: var(--warning);
+}
+
+.subject-grade.poor {
+    color: var(--danger);
+}
+
+.subject-status {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Exams Table */
+.exams-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.exams-table th,
+.exams-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.exams-table th {
+    background: var(--bg-secondary);
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.exams-table tr:hover {
+    background: var(--bg-secondary);
+}
+
+.exam-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.exam-score {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.exam-score.excellent {
+    color: var(--success);
+}
+
+.exam-score.good {
+    color: var(--accent-blue);
+}
+
+.exam-score.average {
+    color: var(--warning);
+}
+
+.exam-score.poor {
+    color: var(--danger);
+}
+
+/* Progress Chart */
+.chart-container {
+    height: 300px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.chart-bar {
+    background: var(--accent-blue);
+    width: 40px;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.chart-bar:hover {
+    background: var(--accent-blue-hover);
+}
+
+.chart-label {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.chart-value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .main-container {
+        padding: 0 1rem;
+    }
+
+    .nav-main {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exams-table {
+        font-size: 0.9rem;
+    }
+
+    .exams-table th,
+    .exams-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+ footer {
+    background: var(--bg-card);
+    padding: 3rem 2rem 1rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--accent-blue);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-blue);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}

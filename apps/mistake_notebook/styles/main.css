@@ -1,0 +1,344 @@
+/* --------------------------- generic ----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color-bg);
+    padding: 0px;
+}
+
+a {
+    color: var(--text-primary);
+}
+
+/* main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+} */
+
+
+/* ====================== title ===================== */
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: var(--color-text-dark);
+    position: sticky;
+    background-color: var(--color-bg-trans);
+    top: 52px;
+    z-index: 3;
+    padding: 10px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+    backdrop-filter: blur(5px);
+}
+
+/* =========================== subject list ====================== */
+.subjects {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.subject-name {
+    color: var(--color-text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-accent-blue);
+    margin: 10px;
+    /* height: 90px; */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    text-decoration: none;
+}
+
+/* .subject-name:hover {
+    background-color: var(--color-accent-yellow);
+} */
+
+.controls * {
+    width: 40px;
+    height: 40px;
+    background-color: none;
+}
+
+.controls-buttons {
+    padding: 2.5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.controls-buttons img {
+    width: 35px;
+    height: 35px;
+}
+
+.delete {
+    background-color: #6496ff;
+}
+
+.delete:hover {
+    background-color: #85a5ec;
+}
+
+.delete:active {
+    background-color: #3f63b1;
+}
+
+.edit {
+    background-color: #6496ff;
+}
+
+.edit:hover {
+    background-color: #85a5ec;
+}
+
+.edit:active {
+    background-color: #3f63b1;
+}
+
+.change-subject {
+    margin-top: 0;
+    max-height: 0;
+    height: 100px;
+    overflow: hidden; 
+    transition: max-height 0.2s ease;
+    padding: 0; 
+}
+
+.show-mistake {
+    display: block;
+    height: max-content;
+}
+
+.change-subject.open {
+  max-height: 300px; /* enough space */
+  padding: 20px;
+}
+
+.mistake {
+    padding: 8px;
+}
+/* ========================== mistakes ===================== */
+.mistake-title {
+    font-size: 20px;
+}
+
+.answer,
+.question {
+    font-weight: 300;
+}
+
+/* ======================== each mistake ====================== */
+input,
+textarea {
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+    padding: 20px;
+    display: block;
+    margin: 10px;
+    width: 90%;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid var(--color-text-gray);
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+#clear {
+    display: none;
+}
+
+#save-mistake,
+.save {
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--color-button-hover);
+    color: var(--color-white);
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+}
+
+#save-mistake:hover,
+.save:hover {
+    background-color: var(--color-accent-yellow);
+}
+
+#save-mistake:active,
+.save:active {
+    background-color: var(--color-accent-blue);
+}
+
+/* ===================== add button ================= */
+
+.add-button {
+    background-color: var(--color-accent-yellow);
+    color: var(--color-white);
+    padding: 7px 33px;
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    font-weight: 900;
+    z-index: 100;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.add-button:hover {
+    background-color: var(--color-accent-blue);
+}
+
+.add-button:active {
+    background-color: var(--color-button-hover);
+}
+
+/* ========================= new subject handler ================== */
+.create-subject {
+    /* display: flex; */
+    display: none;
+    /* padding: auto; */
+    margin-left: -10px;
+}
+
+.subject-name-input {
+    flex: 1;
+    margin-left : 5px;
+    /* width: 70%; */
+    /* display: inline; */
+}
+
+#subject-list {
+    display: block;
+    /* margin: 0;
+    padding: 0; */
+    width: 100%;
+}
+
+/* ==================== mistakes box =============== */
+
+.q {
+    font-size: 22px;
+}
+
+.r {
+    background-color: greenyellow;
+    color: black;
+}
+.w {
+    background-color: red;
+    /* color: ; */
+}
+.c {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+.subject-name {
+    background: linear-gradient(135deg, var(--color-accent-blue), #5579ff);
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subject-name:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.delete {
+    background-color: #ff6b6b;
+}
+
+.delete:hover {
+    background-color: #ff8787;
+}
+
+.edit {
+    background-color: #4dabf7;
+}
+
+.edit:hover {
+    background-color: #74c0fc;
+}
+.change-subject {
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden; 
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.change-subject.open {
+    max-height: 800px;
+    opacity: 1;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--color-bg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.q::before {
+    content: "❓السؤال : " ; 
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.r::before {
+    content: "✅ الإجابة الصحيحة: ";
+    font-weight: bold;
+    color: #00d400;
+    margin-right: 5px;
+}
+
+.w::before {
+    content: "❌ إجابتك: ";
+    font-weight: bold;
+    color: red;
+    margin-right: 5px;
+}
+
+.c::before {
+    content: "💬 الملاحظات: ";
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin-right: 5px;
+}
+.subjects {
+    width: 80%;
+    margin: 40px auto;
+    gap: 10px;
+}
+
+.mistake p, .mistake pre {
+    margin: 10px 0;
+}

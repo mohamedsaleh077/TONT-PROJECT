@@ -1,0 +1,6 @@
+.idea
+docker_setup
+/announcement/uploads/*
+/settings/pfps/*
+!/settings/pfps/default.jpg
+/community/uploads/*

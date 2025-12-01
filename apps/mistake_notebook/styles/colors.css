@@ -1,0 +1,53 @@
+body * {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    fill 0.3s ease,
+    stroke 0.3s ease;
+}
+
+:root {
+  --color-bg: #eceef3;
+  --color-bg-trans: #eceef3ee;
+  --color-primary: rgb(44, 82, 130);
+  --color-text-dark: rgb(0, 0, 27);
+  --color-text-gray: rgb(58, 58, 58);
+  --color-white: #ffffff;
+
+  --color-accent-yellow: rgb(255, 202, 28);
+  --color-accent-blue: rgb(0, 0, 202);
+
+  --color-button-bg: rgb(17, 38, 65);
+  --color-button-hover: rgb(44, 82, 130);
+
+  --color-border-gray: rgb(192, 192, 192);
+}
+
+
+[data-theme="dark"] {
+  --color-bg: lch(18.99% 6.28 279.71);
+  --color-bg-trans: #333747ee;
+  /* dark background */
+  --color-primary: rgb(150, 200, 255);
+  /* lighter blue for contrast */
+  --color-text-dark: #eceef3;
+  /* light text for readability */
+  --color-text-gray: rgb(180, 180, 180);
+  /* softer gray for secondary text */
+  --color-white: #ffffff;
+  /* stays white */
+
+  --color-accent-yellow: rgb(255, 179, 0);
+  /* slightly darker yellow */
+  --color-accent-blue: rgb(100, 150, 255);
+  /* softer blue for dark bg */
+
+  --color-button-bg: rgb(30, 45, 70);
+  /* darker button bg */
+  --color-button-hover: rgb(60, 100, 180);
+  /* hover highlight */
+
+  --color-border-gray: rgb(80, 80, 80);
+  /* subtle dark border */
+}

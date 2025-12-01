@@ -1,0 +1,441 @@
+/* --------------------------- generic ----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    /*direction: ltr;*/
+}
+
+body {
+    background-color: var(--color-bg);
+    padding: 0px;
+    direction: ltr;
+}
+
+a {
+    color: var(--color-bg);
+}
+
+header {
+    direction: rtl;
+    position: sticky;
+    top: 0;
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow-md);
+    height: 10vh;
+}
+
+
+
+main {
+    padding-top: 0;
+}
+
+/* =========================== header =========================== */
+
+.img-container {
+    display: none;
+}
+
+.container {
+    display: flex;
+}
+
+#notify {
+    position: absolute;
+    top: 20px;
+    background-color: var(--color-border-gray);
+    color: var(--color-text-dark);
+    z-index: 1000;
+    padding: 30px;
+    right: 25%;
+    left: 25%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* ============================ chat body ================================ */
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    text-align: center;
+    font-family: "Montserrat";
+    color: var(--color-text-dark);
+}
+
+.chat-body {
+    scrollbar-width: none;
+
+    /* height: 93vh; */
+    /* position: relative; */
+    overflow: scroll;
+    padding: 25px;
+    padding-bottom: 150px;
+    height: 76dvh;
+}
+
+pre,
+.user-message-text {
+    display: inline-block;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.user-message-text,
+.bot-message-text {
+    max-width: 70%;
+    font-size: 19px;
+    border-radius: 26px;
+    padding: 15px;
+    width: auto;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.user-message-text {
+    background-color: var(--color-accent-yellow);
+    /* color: white; */
+    /* padding: 25px; */
+    /* text-align: left; */
+}
+
+.bot-message-text {
+    /* background-color: var(--color-accent-blue); */
+    color: var(--color-text-dark);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+.bot-respond-body {
+    margin-bottom: 30px;
+    padding: 50px;
+}
+
+.copy-button {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 13px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    margin-top: 10px;
+}
+
+.copy-button:hover {
+    opacity: 1;
+}
+
+/* ==================================== user prompt ============================ */
+/* .user-input-container {} */
+
+/* Update the user-input to be a column flex container */
+main {
+    position: relative;
+    flex-grow: 1;
+    max-width: 100%;
+    height: auto;
+    min-height: 50vh;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    border-radius: 70px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* max-width: 800px; */
+    padding: 10px 15px;
+    /* backdrop-filter: blur(5px); */
+    z-index: 9;
+    background-color: var(--color-bg);
+    border: 1px solid white;
+}
+
+/* 
+.menu-container {
+    flex: 1;
+} */
+
+/* New container for the textarea and buttons to align them properly */
+.input-and-buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* Makes it span the full width of the parent */
+    gap: 10px;
+    /* Space between items */
+}
+
+/* Style the prompts container */
+.prompts-menu {
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* Space between prompt chips */
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.prompts-menu.show-menu {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: 10px;
+}
+
+
+/* Style the individual prompt buttons (chips) */
+.prompt-chip {
+    background-color: transparent;
+    border: 1px solid var(--color-button-hover);
+    color: var(--color-button-hover);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 50px;
+    /* Makes them pill-shaped */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+}
+
+.prompt-chip:hover {
+    background-color: var(--color-button-hover);
+    color: var(--color-bg);
+}
+
+/* Style for the toggle button */
+.toggle-prompts {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--color-text-dark);
+}
+
+/* Adjust the textarea to fill available space */
+#user-promot {
+    scrollbar-width: none;
+
+    flex-grow: 1;
+    /* Allows the textarea to expand */
+    background-color: transparent;
+    color: var(--color-text-dark);
+    padding: 15px;
+    border-radius: 70px;
+    height: 8vh;
+    border: none;
+    resize: none;
+    font-size: 18px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    overflow-y: scroll;
+}
+
+#user-promot:focus {
+    outline: none;
+}
+
+[contenteditable="true"][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    /* Adjust color as needed */
+    display: block;
+    /* Ensures the placeholder is visible and handles line breaks */
+    pointer-events: none;
+    /* Allows click-through to the editable content */
+}
+
+[contenteditable="true"][data-placeholder]:empty:focus::before {
+    content: "";
+    /* Hides the placeholder when the div is focused */
+}
+
+/* Final tweaks for the submit button */
+#submit {
+    height: 50px;
+    min-width: 50px;
+    border: none;
+    background-color: var(--color-accent-yellow);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#submit svg {
+    display: block;
+    /* Centers the icon */
+    margin: auto;
+}
+
+#submit:hover {
+    background-color: var(--color-button-hover);
+}
+
+#submit:active {
+    background-color: var(--color-button-bg);
+}
+
+#submit svg {
+    margin: auto;
+}
+
+.menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.promp-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-text-dark);
+    color: var(--color-text-dark);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.promp-button:hover {
+    border-color: var(--color-accent-yellow);
+    background-color: var(--color-accent-yellow);
+    color: var(--color-bg);
+    transform: rotate(90deg);
+}
+
+.promp-button.active {
+    border-color: var(--color-accent-yellow);
+    background-color: var(--color-accent-yellow);
+    color: var(--color-bg);
+    transform: rotate(90deg);
+}
+
+
+.prompts-menu {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-trans);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.prompts-menu.show-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    width: 125px;
+    height: 44dvh;
+}
+
+
+.prompt-chip {
+    background-color: transparent;
+    border: 1px solid var(--color-button-hover);
+    color: var(--color-button-hover);
+    padding: 10px 16px;
+    margin: 5px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.prompt-chip:hover {
+    background-color: var(--color-button-hover);
+    color: var(--color-bg);
+}
+
+.prompt-chip.active {
+    background-color: var(--color-button-hover);
+    color: var(--color-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================ aside ======================== */
+
+aside {
+    /* display: none; */
+    width: 300px;
+    flex-shrink: 0;
+    max-width: 30%;
+    border-right: 1px solid gray;
+}
+
+.chat-record {
+    color: var(--color-text-dark);
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.chat-record p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-record:hover {
+    background-color: gray;
+}
+
+.history-btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    width: 50%;
+    padding: 15px;
+    font-size: 18px;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg);
+    border: none;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--color-accent-yellow);
+}

@@ -1,0 +1,90 @@
+.intro p{
+    text-align: justify;
+    margin: 20px;
+}
+
+/* ===================== team members ============ */
+.team, .aboutTeam {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutTeam {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+}
+
+.team-logo {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 25px;
+}
+
+.team-name {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.team-discr{
+    text-align: right;
+}
+
+.team-about-txt {
+    flex-grow: 1;
+    width: 60%;
+    text-align: justify;
+    direction: ltr;
+}
+
+.team-member {
+    max-width: 400px;
+    height: max-content;
+    /* width: 30%; */
+    margin: 15px;
+    border: 1px solid gray;
+    padding: 15px;
+    border-radius: 25px;
+    position: relative;
+    
+    padding-top: 100px;
+    margin-top: 120px;
+    min-height: 400px;
+
+    min-height: 400px;
+}
+
+.member-pic {
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.member-name {
+    font-size: 25px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.member-job {
+    font-size: 20px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.member-note {
+    text-align: justify;
+    direction: ltr;
+    text-align: right;
+}

@@ -1,0 +1,121 @@
+@media (max-width: 700px) {
+    body {
+        padding: 0;
+        margin: 0;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    header {
+        /* height: 7vh; */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .header-container {
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+    }
+
+    .img-container {
+        display: flex;
+    }
+
+    header img {
+        height: 30px;
+        margin: 10px;
+        padding-right: 15px;
+        display: inline-block;
+    }
+
+    .Tont {
+        width: max-content;
+        text-align: right;
+        height: 50px;
+    }
+
+    header nav {
+        position: absolute;
+        top: 50px;
+        /* background-color: #eceef3; */
+        width: 100%;
+        text-align: left;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        z-index: 10;
+    }
+
+    header nav.active {
+        max-height: 500px;
+    }
+
+    header nav * {
+        display: block;
+        margin: 20px auto 20px 10px;
+    }
+
+    .chat-body {
+        /* height: 93vh; */
+        position: relative;
+    }
+
+    .bot-respond-body {
+        padding-left: 30px;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    .user-input {
+        padding: 5px;
+        max-width: 100%;
+        width: 99%;
+        bottom: 50px;
+    }
+
+    .prompts-menu {
+        right: 0;
+        left: auto;
+        bottom: 100%;
+        flex-direction: column;
+    }
+
+    .prompt-chip {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .history-content {
+        width: 95%;
+        height: 85vh;
+    }
+
+    .conversation-item {
+        padding: 12px;
+    }
+
+    aside {
+        position: fixed;
+        height: 93vh;
+        z-index: 100;
+        background-color: var(--color-bg);
+        width: 100%;
+        max-width: 600px;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+
+    aside.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

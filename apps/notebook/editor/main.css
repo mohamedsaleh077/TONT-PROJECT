@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Editor Container */
+.editor-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 20px auto;
+    width: 100%;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    max-height: 88vh;
+    direction: ltr;
+}
+
+/* Editor Header */
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.note-title-input {
+    flex: 1;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--accent-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent-blue-hover);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.btn-outline:hover {
+    background: var(--bg-elevated);
+}
+
+/* Formatting Toolbar */
+.formatting-toolbar {
+    display: flex;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.toolbar-group {
+    display: flex;
+    gap: 2px;
+    padding-right: 15px;
+    border-right: 1px solid var(--border-subtle);
+    margin-right: 10px;
+}
+
+.toolbar-group:last-child {
+    border-right: none;
+    margin-right: 0;
+}
+
+.toolbar-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+}
+
+.toolbar-button:hover {
+    background: var(--bg-base);
+    color: var(--color-primary);
+}
+
+.toolbar-button.active {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+/* Note Editor Area */
+.note-editor {
+    flex: 1;
+    padding: 25px;
+    background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 39px,
+    var(--text-muted) 40px
+    );
+    line-height: 40px;
+    background-color: var(--bg-surface);
+    overflow-y: auto;
+}
+
+.editor-content {
+    min-height: 400px;
+    outline: none;
+    padding: 0;
+    font-size: 17px;
+    line-height: 40px;
+    color: var(--text-primary);
+}
+
+/* Editor Status Bar */
+.editor-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.word-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

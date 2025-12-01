@@ -1,0 +1,26 @@
+.leaderboardBlock {
+    min-height: 60px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-bottom: 1px solid #ddd;
+    background-image: linear-gradient(to left, rgb(13 27 100), rgb(57 63 132));
+    border: rgb(13 27 100);
+    border-width: 3px;
+    border-style: solid;
+    color: rgb(245, 219, 253);
+    font-size: 30px;
+    justify-content: space-between;
+}
+
+.achievements{
+    min-width: 30;
+    margin-right: 10px;
+}
+.leftLeaderboard{
+    display: flex;
+}

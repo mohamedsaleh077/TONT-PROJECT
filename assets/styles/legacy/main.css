@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, sans-serif; */
+    /* color: var(--text-primary); */
+}
+body {
+    background-color: var(--bg-primary);
+    padding: 32px;
+    padding-top: 100px;
+}
+
+a{
+    margin-left: 14px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--accent-blue);
+    /*font-weight: 600;*/
+}
+
+.logo i {
+    font-size: 2.2rem;
+    /* color: #3b72ce; */
+}
+
+.logo:hover {
+    color: var(--accent-blue-hover);
+}
+
+
+.cetered-gray-text {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    text-align: center;
+}
+.centered-H1 {
+    font-size: 30px;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "Alexandria", sans-serif;
+    text-align: center;
+}
+.answers {
+    text-align: right;
+}
+.answerBlock{
+    height: 66px;
+    display: flex;
+    align-items: center;
+}
+
+.TheAnswers{
+    font-size: 25px;
+    color: var(--text-primary);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "Alexandria", sans-serif;
+    vertical-align: middle;
+
+}
+.nextButton{
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 40px;
+
+}
+.nextButton:hover{
+    background-color: var(--accent-blue-hover);
+    transition: all 0.3s;
+}
+
+/* .QuestionBlook{
+    max-width: 100%;
+} */
+
+
+
+/* .QuestionBlook{
+    margin-bottom: 90px;
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+
+
+/* 
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background: rgb(255, 202, 28);
+    border: 3px solid #FFF;
+    box-shadow: 0 0 0 1px rgb(255, 202, 28);
+} */
+
+
+main{
+    margin: auto;
+    background-color: var(--bg-secondary);
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(255, 202, 28);
+    border: 3px solid rgb(255, 202, 28);
+    box-shadow: 0 0 0 1px rgb(255, 202, 28);
+    transition: background 0.2s ease-in-out;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+input[type="radio"]:checked + .custom-radio {
+    background: rgb(0, 0, 202);
+}
+
+.answer-label:hover .custom-radio {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    background-color: rgb(0, 0, 202);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.answer-label {
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center; /* This is the key to aligning the radio and the text */
+    cursor: pointer;
+}
+
+.right-H1{
+
+    font-size: 30px;
+    color: var(--text-primary);
+    margin-top: 32px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "Alexandria", sans-serif;
+    text-align: right;
+
+
+}
+
+.explainText{
+    font-size: 20px;
+    color: var(--text-primary);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "Alexandria", sans-serif;
+    vertical-align: middle;
+    text-align: justify;
+}
+
+.chimestry-dropdown{
+    padding: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 400px;
+    margin-bottom: 20px;
+}
+.chimestry-dropdown-text{
+    padding-top: 20px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-right: 30px;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: 3px solid rgb(192, 192, 192);
+    font-size: 20px;
+    font-weight: 600px;
+}
+.chimestry-dropdown2{
+    margin-right: 20px;
+    margin-left: -20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    cursor: pointer;
+    height: auto;
+    width: 90%;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 400px;
+}
+.chimestry-dropdown-block{
+    display: none;
+}
+.cuming-soon{
+    display: inline;
+    height: 25px;
+    width: 25px;
+}
+.cuming-soon-text{
+    font-size: 20px;
+    display: none;
+}
+.cuming-soon:hover +.cuming-soon-text{
+    display: inline-block;
+}
+
+/*          
+    اختبار ذاكر بطريقتك ✓
+    تنظيم الدراسه ومتابعه المستوى 
+    منشئ العادات الجديدة
+    بوصلة الشغف
+    الملتقى ✓
+    الليدر بورد
+    تونت اسيستنت✓        
+              
+*/
+/* انا هعمل الاساات
+حلا هتظبك الشكل والترانزيشان اكثر
+صالح باك ايند */
+
+/* الهابيت تراكار
+الواجها الاساسية
+الloge in , sign up 
+about us والكلام ده
+باقي الكلام */
+
+/*اسمعو يا شويه كاسكيد ستايل شيت كود انا بحب عبدالرحمن راشد*/
+/*اه انا صالح الليدر الجامد طحن*/

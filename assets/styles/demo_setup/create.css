@@ -1,0 +1,202 @@
+
+/* Header */
+.header {
+    background: var(--bg-card);
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Main Container */
+.container {
+    max-width: 1500px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+:root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-card: #ffffff;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --border-color: #e5e7eb;
+      --accent-blue: #08367f;
+      --accent-blue-hover: #0b2c71;
+      --accent-yellow: #f59e0b;
+      --accent-yellow-hover: #d97706;
+      --success: #10b981;
+      --danger: #ef4444;
+    }
+
+    body {
+      font-family: Tahoma, sans-serif;
+      background: var(--bg-secondary);
+      margin: 20px;
+      color: var(--text-primary);
+    }
+
+    /* Tabs header */
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 15px;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      color: var(--text-secondary);
+      transition: 0.2s;
+    }
+
+    .tab-btn.active {
+      color: var(--accent-blue);
+      border-bottom: 3px solid var(--accent-blue);
+    }
+
+    .tab-btn:hover {
+      color: var(--accent-blue-hover);
+    }
+
+    /* Content */
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Table style */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    th {
+      background: var(--accent-blue);
+      color: #fff;
+      padding: 10px;
+    }
+
+    td {
+      padding: 8px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      color: var(--text-secondary);
+    }
+
+    tr:nth-child(even) {
+      background: var(--bg-secondary);
+    }
+
+    /* Forms */
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      background: var(--bg-card);
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    input, select {
+      padding: 6px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    button[type="submit"] {
+      background: var(--success);
+      color: #fff;
+    }
+    button[type="submit"]:hover {
+      background: #0c9a6f;
+    }
+
+/* Tabs header */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--text-secondary);
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    color: var(--accent-blue);
+    border-bottom: 3px solid var(--accent-blue);
+}
+
+.tab-btn:hover {
+    color: var(--accent-blue-hover);
+}
+
+/* Content */
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+
+/* Table style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--accent-blue);
+    color: #fff;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+tr:nth-child(even) {
+    background: var(--bg-secondary);
+}
